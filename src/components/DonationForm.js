@@ -31,7 +31,7 @@ const initialFormState = {
   pan: '',
   pinCode: '',
   address: '',
-  amount: 0,
+  amount: null,
   sponsorPlate: false,
   plateAmount: 100,
   captchaAnswer: '',
@@ -133,7 +133,7 @@ const DonationForm = () => {
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <FormSection title="Personal Information">
+              <FormSection title="Fill the Details">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-700 mb-2">Citizenship</label>
@@ -194,16 +194,16 @@ const DonationForm = () => {
                   value={formData.birthdate}
                   onChange={handleInputChange}
                 />
-              </FormSection>
+              
 
-              <FormSection title="Contact Information">
+              
                 <FormInput
                   label="Email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  required
+
                 />
 
                 <FormInput
@@ -222,16 +222,21 @@ const DonationForm = () => {
                   value={formData.whatsapp}
                   onChange={handleInputChange}
                 />
-              </FormSection>
+              
 
-              <FormSection title="Donation Details">
+              
                 <label className="block text-gray-700 mb-4">Select Amount</label>
-                <AmountSelector
-                  amounts={predefinedAmounts}
-                  selectedAmount={formData.amount}
-                  onChange={(amount) => setFormData(prev => ({ ...prev, amount }))}
-                />
-
+                <div>
+        <input
+          type="number"
+          placeholder="Enter Amount"
+          value={formData.amount}
+          onChange={(e) => setFormData(prev => ({ ...prev, amount: e.target.value }))}
+          className="w-full p-3 border rounded-lg input-focus-effect mt-4"
+        />
+        <p>Become a facilitator by contributing just a rupee a day!</p>
+      </div>
+                
                 {formData.amount >= 2000 && (
                   <FormInput
                     label="PAN Number"
@@ -244,7 +249,7 @@ const DonationForm = () => {
                   />
                 )}
 
-                <div className="flex items-center gap-2 mt-4">
+                {/* <div className="flex items-center gap-2 mt-4">
                   <input
                     type="checkbox"
                     name="sponsorPlate"
@@ -253,49 +258,14 @@ const DonationForm = () => {
                     className="form-checkbox text-orange-600 h-5 w-5"
                   />
                   <label>I would also like to sponsor a steel meal plate worth ₹100</label>
-                </div>
+                </div> */}
               </FormSection>
 
-              <FormSection title="Address">
-                <FormInput
-                  label="Pin Code"
-                  name="pinCode"
-                  value={formData.pinCode}
-                  onChange={handleInputChange}
-                  required
-                />
+              
 
-                <div className="mb-4">
-                  <label className="block text-gray-700 mb-2">
-                    Address <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    name="address"
-                    value={formData.address}
-                    onChange={(e) => setFormData(prev => ({ ...prev, address: e.target.value }))}
-                    required
-                    className="w-full p-3 border rounded-lg input-focus-effect"
-                    rows={3}
-                  />
-                </div>
-              </FormSection>
+              
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <label className="block text-gray-700 mb-2">Verification</label>
-                <div className="flex items-center gap-4">
-                  <span className="text-lg font-semibold">{captcha.num1} + {captcha.num2} = ?</span>
-                  <input
-                    type="text"
-                    name="captchaAnswer"
-                    required
-                    className="w-24 p-3 border rounded-lg input-focus-effect"
-                    value={formData.captchaAnswer}
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <input
                   type="checkbox"
                   name="acceptTerms"
@@ -304,7 +274,7 @@ const DonationForm = () => {
                   className="form-checkbox text-orange-600 h-5 w-5"
                 />
                 <label>I accept the terms and conditions</label>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
