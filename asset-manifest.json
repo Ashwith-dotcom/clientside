@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/clientside/static/css/main.fbe2dfe6.css",
-    "main.js": "/clientside/static/js/main.dd95505f.js",
+    "main.css": "/clientside/static/css/main.e429dacd.css",
+    "main.js": "/clientside/static/js/main.4c319276.js",
     "static/js/453.14e92b7d.chunk.js": "/clientside/static/js/453.14e92b7d.chunk.js",
     "static/media/footer1.png": "/clientside/static/media/footer1.fe85c9749ebe90a33d54.png",
     "static/media/1.jpg": "/clientside/static/media/1.6d469ad53f84a2f8f337.jpg",
+    "static/media/Hospital.avif": "/clientside/static/media/Hospital.b80cb94e1ea2c374936d.avif",
     "static/media/5.jpg": "/clientside/static/media/5.370ba38be53c34722c3f.jpg",
     "static/media/2.jpg": "/clientside/static/media/2.2adc508d73cb1a9d7edd.jpg",
     "static/media/3.jpg": "/clientside/static/media/3.f0ee60872bf0540cc444.jpg",
     "index.html": "/clientside/index.html",
-    "main.fbe2dfe6.css.map": "/clientside/static/css/main.fbe2dfe6.css.map",
-    "main.dd95505f.js.map": "/clientside/static/js/main.dd95505f.js.map",
+    "main.e429dacd.css.map": "/clientside/static/css/main.e429dacd.css.map",
+    "main.4c319276.js.map": "/clientside/static/js/main.4c319276.js.map",
     "453.14e92b7d.chunk.js.map": "/clientside/static/js/453.14e92b7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbe2dfe6.css",
-    "static/js/main.dd95505f.js"
+    "static/css/main.e429dacd.css",
+    "static/js/main.4c319276.js"
   ]
 }
