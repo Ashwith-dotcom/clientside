@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const FormInput = ({
   label,
   name,
@@ -28,7 +26,7 @@ const FormInput = ({
         pattern={pattern}
         title={title}
         placeholder={placeholder}
-        className="w-full p-3 border rounded-lg input-focus-effect"
+        className="w-full p-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
       />
     </div>
   );

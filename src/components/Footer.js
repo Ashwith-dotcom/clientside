@@ -1,14 +1,11 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="relative">
-      {/* Footer Image */}
-      
 
-      {/* Main Footer Content */}
       <div className="bg-gradient-to-b from-orange-900 to-orange-800">
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -70,7 +67,7 @@ const Footer = () => {
           </div>
           <div className="w-full mt-8">
         <img
-          src={require("../Images/footer1.png")} // Replace with your image path or URL
+          src="/Images/footer1.png"
           alt="Footer Image"
           className="w-full h-auto "
         />
